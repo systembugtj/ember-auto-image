@@ -1,7 +1,7 @@
 # ember-auto-image
 auto scale image into give size and keep aspect ratio.
 
-[![Build Status](https://travis-ci.org/systembugtj/ember-exif-shim.svg?branch=0.2.0)](https://travis-ci.org/systembugtj/ember-exif-shim)
+[![Build Status](https://travis-ci.org/systembugtj/ember-auto-image.svg?branch=master)](https://travis-ci.org/systembugtj/ember-auto-image)
 [![npm version](https://badge.fury.io/js/ember-auto-image.svg)](https://badge.fury.io/js/ember-auto-image)
 [![Ember Observer Score](https://emberobserver.com/badges/ember-auto-image.svg)](https://emberobserver.com/addons/ember-auto-image)
 
