@@ -1,10 +1,11 @@
-/* jshint node: true */
+/* eslint-env node */
 'use strict';
 
 module.exports = {
-  name: 'ember-aspect-ratio-image',
+  name: 'ember-auto-image',
 
   included: function(app) {
     app.import('./vendor/aspect-ratio-image.css');
   }
+
 };

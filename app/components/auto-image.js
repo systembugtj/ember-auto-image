@@ -1,2 +1,1 @@
-import AutoImageComponent from 'ember-auto-image/component';
-export default systembugtj/ember-smart-image;
+export { default } from 'ember-auto-image/components/auto-image';
