@@ -1,6 +1,13 @@
 # ember-auto-image
+auto scale image into give size and keep aspect ratio.
 
-This README outlines the details of collaborating on this Ember addon.
+[![Build Status](https://travis-ci.org/systembugtj/ember-auto-image.svg?branch=master)](https://travis-ci.org/systembugtj/ember-auto-image)
+[![npm version](https://badge.fury.io/js/ember-auto-image.svg)](https://badge.fury.io/js/ember-auto-image)
+[![Ember Observer Score](https://emberobserver.com/badges/ember-auto-image.svg)](https://emberobserver.com/addons/ember-auto-image)
+
+
+0.1.3
+* use ember-image-utils
 
 ## Installation
 
