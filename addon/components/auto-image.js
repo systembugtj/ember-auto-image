@@ -4,8 +4,6 @@ import InViewportMixin from 'ember-in-viewport';
 
 export default Ember.Component.extend(InViewportMixin, {
   layout,
-  classNames: ['aspect-ratio-image'],
-
   width: null,
   height: null,
 
