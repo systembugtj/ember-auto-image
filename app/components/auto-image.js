@@ -1,2 +1,2 @@
-import AspectRatioImageComponent from 'ember-aspect-ratio-image/component';
-export default AspectRatioImageComponent;
+import AutoImageComponent from 'ember-auto-image/component';
+export default systembugtj/ember-smart-image;
