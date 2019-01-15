@@ -1,1 +1,3 @@
-export { default } from 'ember-auto-image/components/auto-image';
+import AutoImage from 'ember-auto-image/components/auto-image';
+
+export default AutoImage;
