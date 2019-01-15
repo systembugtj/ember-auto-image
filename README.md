@@ -1,34 +1,31 @@
-# ember-auto-image
-auto scale image into give size and keep aspect ratio.
+my-addon
+==============================================================================
 
-[![Build Status](https://travis-ci.org/systembugtj/ember-auto-image.svg?branch=master)](https://travis-ci.org/systembugtj/ember-auto-image)
-[![npm version](https://badge.fury.io/js/ember-auto-image.svg)](https://badge.fury.io/js/ember-auto-image)
-[![Ember Observer Score](https://emberobserver.com/badges/ember-auto-image.svg)](https://emberobserver.com/addons/ember-auto-image)
+[Short description of the addon.]
 
-0.1.4
-* update ember-image-utils
-0.1.3
-* use ember-image-utils
 
-## Installation
+Compatibility
+------------------------------------------------------------------------------
 
-* `git clone <repository-url>` this repository
-* `cd ember-auto-image`
-* `npm install`
+* Ember.js v2.18 or above
+* Ember CLI v2.13 or above
 
-## Running
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Installation
+------------------------------------------------------------------------------
 
-## Running Tests
+```
+ember install my-addon
+```
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
 
-## Building
+Usage
+------------------------------------------------------------------------------
 
-* `ember build`
+[Longer description of how to use the addon in apps.]
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
