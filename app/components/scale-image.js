@@ -1,0 +1,1 @@
+export { default } from 'ember-auto-image/components/scale-image';
