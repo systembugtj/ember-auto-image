@@ -1,7 +1,6 @@
-import Ember from 'ember';
+import { run } from '@ember/runloop';
 import { moduleForComponent, test } from 'ember-qunit';
 
-var run = Ember.run;
 
 moduleForComponent('auto-image', 'AutoImageComponent', {
   unit: true
