@@ -1,7 +1,7 @@
-my-addon
+ember-auto-image
 ==============================================================================
 
-[Short description of the addon.]
+[Image Component supporting auto-size.]
 
 
 Compatibility
@@ -15,14 +15,16 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install my-addon
+ember install ember-auto-image
 ```
 
 
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+```
+{{auto-image src="" title="" width=100 height=100}}
+```
 
 
 License
