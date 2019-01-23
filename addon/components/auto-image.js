@@ -5,6 +5,7 @@ import InViewportMixin from 'ember-in-viewport';
 import fetchImage from 'ember-image-utils/utils/fetch-image';
 import aspectRatio from 'ember-image-utils/utils/aspect-ratio';
 import { htmlSafe } from '@ember/template';
+import { observer } from '@ember/object';
 
 export default Component.extend(InViewportMixin, {
   layout,
@@ -13,6 +14,7 @@ export default Component.extend(InViewportMixin, {
   title: "",
   src: "",
   size: undefined,
+  loaded: false,
 
   imageStyle: computed('size', function() {
     const size = this.get("size");
@@ -26,8 +28,24 @@ export default Component.extend(InViewportMixin, {
     return htmlSafe(`width: ${width}px;height: ${height}px`);
   }),
 
+  srcChanged: observer("src", () => {
+    this.set("loaded", false);
+    if (this.get("viewportEntered")) {
+      this.loadImage();
+    }
+  }),
+
+  didExitViewport() {
+  },
+
   didEnterViewport() {
-    this._super(...arguments);
+    // If not loaded, fetch image and show it.
+    if (!this.get("loaded")) {
+      this.loadImage();
+    }
+  },
+
+  loadImage() {
     let width = parseInt(this.get('width'));
     let height = parseInt(this.get('height'));
     const src = this.get("src");
@@ -35,8 +53,13 @@ export default Component.extend(InViewportMixin, {
     fetchImage(src).then(image => {
       return aspectRatio(image, width, height);
     }).then(size => {
-      this.set('src', src);
+      this.set('imageSrc', src);
       this.set('size', size);
-    })
-  },
+      this.set('loaded', true);
+    }).catch(()=> {
+      this.set("imageSrc", this.get("fallbackSrc"));
+      this.set("size", { width, height });
+      this.set('loaded', true);
+    });
+  }
 });
