@@ -28,7 +28,7 @@ export default Component.extend(InViewportMixin, {
     return htmlSafe(`width: ${width}px;height: ${height}px`);
   }),
 
-  srcChanged: observer("src", () => {
+  srcChanged: observer("src", function() {
     this.set("loaded", false);
     if (this.get("viewportEntered")) {
       this.loadImage();
