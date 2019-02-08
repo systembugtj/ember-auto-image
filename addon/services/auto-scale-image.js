@@ -4,6 +4,7 @@ import aspectRatio from 'ember-image-utils/utils/aspect-ratio';
 import fetchImage from 'ember-image-utils/utils/fetch-image';
 
 export default Service.extend({
+  // Most browser has 3 concurrent image loading.
   scaleImage: task(function * (src, width, height, fallbackSrc) {
     try {
       const image = yield fetchImage(src);
