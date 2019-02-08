@@ -26,6 +26,9 @@ Usage
 {{auto-image src="" title="" width=100 height=100}}
 ```
 
+TODO
+
+- [ ] Add more unit test;
 
 License
 ------------------------------------------------------------------------------
