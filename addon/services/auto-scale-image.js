@@ -13,14 +13,12 @@ export default Service.extend({
         imageSrc: src,
         size
       }
-
     } catch (e) {
       return {
         imageSrc: fallbackSrc || "",
         size:  { width, height }
       }
     }
-
   }).maxConcurrency(3).enqueue()
 
 });

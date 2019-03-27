@@ -3,6 +3,7 @@ import { htmlSafe } from '@ember/template';
 import { observer } from '@ember/object';
 import { computed } from "@ember/object";
 import { inject as service } from "@ember/service";
+import { task } from "ember-concurrency";
 
 import layout from '../templates/components/auto-image';
 import InViewportMixin from 'ember-in-viewport';
@@ -43,20 +44,20 @@ export default Component.extend(InViewportMixin, {
   didEnterViewport() {
     // If not loaded, fetch image and show it.
     if (!this.get("loaded")) {
-      this.loadImage();
+      this.loadImage.perform();
     }
   },
 
-  async loadImage() {
+  loadImage: task(function * () {
     let width = parseInt(this.get('width'));
     let height = parseInt(this.get('height'));
     const src = this.get("src");
     const fallbackSrc = this.get("fallbackSrc");
 
-    const result = await this.get("autoScaleImage").get("scaleImage").perform(src, width, height, fallbackSrc);
+    const result = yield this.get("autoScaleImage").get("scaleImage").perform(src, width, height, fallbackSrc);
 
     this.set("imageSrc", result.imageSrc);
     this.set("size", result.size);
     this.set('loaded', true);
-  }
+  }),
 });
