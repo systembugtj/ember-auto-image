@@ -2,8 +2,8 @@
 
 ## Installation
 
-* `git clone <repository-url>`
-* `cd my-addon`
+* `git clone https://github.com/systembugtj/ember-auto-image`
+* `cd ember-auto-image`
 * `npm install`
 
 ## Linting

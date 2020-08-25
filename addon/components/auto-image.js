@@ -20,20 +20,20 @@ export default Component.extend(InViewportMixin, {
   loaded: false,
 
   imageStyle: computed('size', function() {
-    const size = this.get("size");
+    const size = this.size;
     return size ? htmlSafe(`width: ${size.width}px; height: ${size.height}px`) : htmlSafe("");
   }),
 
   containerStyle: computed('width', 'height', function() {
-    const width = parseInt(this.get('width'));
-    const height = parseInt(this.get('height'));
+    const width = parseInt(this.width);
+    const height = parseInt(this.height);
 
     return htmlSafe(`width: ${width}px;height: ${height}px`);
   }),
 
   srcChanged: observer("src", function() {
     this.set("loaded", false);
-    if (this.get("viewportEntered")) {
+    if (this.viewportEntered) {
       this.loadImage();
     }
   }),
@@ -43,18 +43,18 @@ export default Component.extend(InViewportMixin, {
 
   didEnterViewport() {
     // If not loaded, fetch image and show it.
-    if (!this.get("loaded")) {
+    if (!this.loaded) {
       this.loadImage.perform();
     }
   },
 
   loadImage: task(function * () {
-    let width = parseInt(this.get('width'));
-    let height = parseInt(this.get('height'));
-    const src = this.get("src");
-    const fallbackSrc = this.get("fallbackSrc");
+    let width = parseInt(this.width);
+    let height = parseInt(this.height);
+    const src = this.src;
+    const fallbackSrc = this.fallbackSrc;
 
-    const result = yield this.get("autoScaleImage").get("scaleImage").perform(src, width, height, fallbackSrc);
+    const result = yield this.autoScaleImage.get("scaleImage").perform(src, width, height, fallbackSrc);
 
     this.set("imageSrc", result.imageSrc);
     this.set("size", result.size);

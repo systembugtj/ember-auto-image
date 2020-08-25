@@ -1,13 +1,13 @@
 
 
 <div class="image-container">
-  {{auto-image width=80 height=60 src="http://placekitten.com/2000/1125"}}
+  <AutoImage @width={{80}} @height={{60}} @src="http://placekitten.com/2000/1125" />
 </div>
 <div class="image-container">
   <ul>
     {{#each model as |image|}}
       <li>
-        {{auto-image width=40 height=40 src=image }}
+        <AutoImage @width={{40}} @height={{40}} @src={{image}} />
       </li>
     {{/each}}
   </ul>
