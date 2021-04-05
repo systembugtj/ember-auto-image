@@ -5,9 +5,9 @@
 </div>
 <div class="image-container">
   <ul>
-    {{#each model as |image|}}
+    {{#each this.model as |image|}}
       <li>
-        <AutoImage @width={{40}} @height={{40}} @src={{image}} />
+        <AutoImage @width="40" @height="40" @src={{image}} />
       </li>
     {{/each}}
   </ul>
