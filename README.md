@@ -1,7 +1,7 @@
 ember-auto-image
 ==============================================================================
 
-[Image Component supporting auto-size.]
+[Image Component supporting auto-size.](https://www.systembug.me/ember-auto-image/)
 
 
 Compatibility
