@@ -1,7 +1,7 @@
 {
   "name": "ember-auto-image",
   "description": "An Ember component that maintains the correct aspect ratio for an image",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "scripts": {
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel \"lint:!(fix)\"",
