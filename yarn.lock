@@ -4300,14 +4300,16 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-autochangelog@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/autochangelog/-/autochangelog-3.0.3.tgz#aad1f2618b51dc7debe41286faf510de9ff33c36"
-  integrity sha512-peeCiuFjWeRkoUubAeImnaxxYNWSUosYHHjRyojxSylhI4t2pj24lxaNAsI8NBnri+r/u+TxqVa9YvP0K0KA0w==
+auto-changelog@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.npmjs.org/auto-changelog/-/auto-changelog-2.4.0.tgz#a2d57d49b70ada7ca2e7c6a20a71572561d19cd9"
+  integrity sha512-vh17hko1c0ItsEcw6m7qPRf3m45u+XK5QyCrrBFViElZ8jnKrPC1roSznrd1fIB/0vR/zawdECCRJtTuqIXaJw==
   dependencies:
-    commander "^4.1.0"
-    parse-git-config "^3.0.0"
-    semver-compare "^1.0.0"
+    commander "^7.2.0"
+    handlebars "^4.7.7"
+    node-fetch "^2.6.1"
+    parse-github-url "^1.0.2"
+    semver "^7.3.5"
 
 aws-sign2@~0.6.0:
   version "0.6.0"
@@ -6340,7 +6342,7 @@ commander@2.8.x:
   dependencies:
     graceful-readlink ">= 1.0.0"
 
-commander@7.2.0:
+commander@7.2.0, commander@^7.2.0:
   version "7.2.0"
   resolved "https://registry.npmjs.org/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
@@ -6354,7 +6356,7 @@ commander@^2.6.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
 
-commander@^4.1.0, commander@^4.1.1:
+commander@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-4.1.1.tgz#9fd602bd936294e9e9ef46a3f4d6964044b18068"
   integrity sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==
@@ -9472,11 +9474,6 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-git-config-path@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/git-config-path/-/git-config-path-2.0.0.tgz#62633d61af63af4405a5024efd325762f58a181b"
-  integrity sha512-qc8h1KIQbJpp+241id3GuAtkdyJ+IK+LIVtkiFTRKRrmddDzs3SI9CvP1QYmWBFvm1I/PWRwj//of8bgAc0ltA==
-
 git-diff-apply@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/git-diff-apply/-/git-diff-apply-3.0.0.tgz#522dbf2feb17d4f4aa45dc09afec8d452f83b132"
@@ -9779,6 +9776,18 @@ handlebars@^4.3.1, handlebars@^4.7.3:
   version "4.7.6"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.6.tgz#d4c05c1baf90e9945f77aa68a7a219aa4a7df74e"
   integrity sha512-1f2BACcBfiwAfStCKZNrUCgqNZkGsAT7UM3kkYtXuLo0KnaVfjKOyf7PRzB6++aK9STyT1Pd2ZCPe3EGOXleXA==
+  dependencies:
+    minimist "^1.2.5"
+    neo-async "^2.6.0"
+    source-map "^0.6.1"
+    wordwrap "^1.0.0"
+  optionalDependencies:
+    uglify-js "^3.1.4"
+
+handlebars@^4.7.7:
+  version "4.7.7"
+  resolved "https://registry.npmjs.org/handlebars/-/handlebars-4.7.7.tgz#9ce33416aad02dbd6c8fafa8240d5d98004945a1"
+  integrity sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==
   dependencies:
     minimist "^1.2.5"
     neo-async "^2.6.0"
@@ -10315,11 +10324,6 @@ ini@2.0.0:
 ini@^1.3.4, ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
-
-ini@^1.3.5:
-  version "1.3.8"
-  resolved "https://registry.npmjs.org/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
-  integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
 ini@~1.3.4:
   version "1.3.5"
@@ -12524,6 +12528,13 @@ node-fetch@^2.6.0:
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
+node-fetch@^2.6.1:
+  version "2.6.7"
+  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
+  integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
+  dependencies:
+    whatwg-url "^5.0.0"
+
 node-gyp@^8.2.0:
   version "8.3.0"
   resolved "https://registry.npmjs.org/node-gyp/-/node-gyp-8.3.0.tgz#ebc36a146d45095e1c6af6ccb0e47d1c8fc3fe69"
@@ -13391,13 +13402,10 @@ parse-asn1@^5.0.0:
     evp_bytestokey "^1.0.0"
     pbkdf2 "^3.0.3"
 
-parse-git-config@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/parse-git-config/-/parse-git-config-3.0.0.tgz#4a2de08c7b74a2555efa5ae94d40cd44302a6132"
-  integrity sha512-wXoQGL1D+2COYWCD35/xbiKma1Z15xvZL8cI25wvxzled58V51SJM04Urt/uznS900iQor7QO04SgdfT/XlbuA==
-  dependencies:
-    git-config-path "^2.0.0"
-    ini "^1.3.5"
+parse-github-url@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/parse-github-url/-/parse-github-url-1.0.2.tgz#242d3b65cbcdda14bb50439e3242acf6971db395"
+  integrity sha512-kgBf6avCbO3Cn6+RnzRGLkUsv4ZVqv/VfAYkRsyBcgkshNvVBkRn1FEZcW0Jb+npXQWm2vHPnnOqFteZxRRGNw==
 
 parse-json@^4.0.0:
   version "4.0.0"
@@ -14854,11 +14862,6 @@ schema-utils@^4.0.0:
     ajv-formats "^2.1.1"
     ajv-keywords "^5.0.0"
 
-semver-compare@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/semver-compare/-/semver-compare-1.0.0.tgz#0dee216a1c941ab37e9efb1788f6afc5ff5537fc"
-  integrity sha1-De4hahyUGrN+nvsXiPavxf9VN/w=
-
 semver-diff@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/semver-diff/-/semver-diff-2.1.0.tgz#4bbb8437c8d37e4b0cf1a68fd726ec6d645d6d36"
@@ -16212,6 +16215,11 @@ tough-cookie@~2.4.3:
     psl "^1.1.24"
     punycode "^1.4.1"
 
+tr46@~0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
+  integrity sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=
+
 tree-sync@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/tree-sync/-/tree-sync-1.2.2.tgz#2cf76b8589f59ffedb58db5a3ac7cb013d0158b7"
@@ -16843,6 +16851,11 @@ wcwidth@^1.0.0, wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
+webidl-conversions@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
+  integrity sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=
+
 webpack-sources@^1.4.0, webpack-sources@^1.4.1:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.4.3.tgz#eedd8ec0b928fbf1cbfe994e22d2d890f330a933"
@@ -16925,6 +16938,14 @@ websocket-driver@>=0.5.1:
 websocket-extensions@>=0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.2.tgz#0e18781de629a18308ce1481650f67ffa2693a5d"
+
+whatwg-url@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz#966454e8765462e37644d3626f6742ce8b70965d"
+  integrity sha1-lmRU6HZUYuN2RNNib2dCzotwll0=
+  dependencies:
+    tr46 "~0.0.3"
+    webidl-conversions "^3.0.0"
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
