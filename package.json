@@ -105,7 +105,9 @@
   "ember-addon": {
     "configPath": "tests/dummy/config"
   },
-  "resolutions": {},
+  "resolutions": {
+    "@glimmer/tracking": "^1.1.2"
+  },
   "volta": {
     "node": "16.0.0",
     "yarn": "1.22.10"

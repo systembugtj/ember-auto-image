@@ -1,7 +1,7 @@
-import Controller from "@ember/controller";
-import { alias } from "@ember/object/computed";
+import Controller from '@ember/controller';
 
-
-export default Controller.extend({
-  images: alias("modal")
-});
+export default class IndexController extends Controller {
+  get images() {
+    return this.model;
+  }
+}
