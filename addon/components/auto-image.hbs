@@ -3,6 +3,6 @@
     {{did-insert this.setupInViewport}}
     >
   {{#if this.isVisible}}
-    <img alt={{this.title}} {{auto-scale imageSrc=@src width=@width height=@height fallbackSrc=@fallbackSrc}}>
+    <img alt={{this.title}} {{auto-scale @src @width @height @fallbackSrc}}>
   {{/if}}
 </div>

@@ -12,27 +12,27 @@ import { task } from 'ember-concurrency';
 export default class AutoScaleModifier extends Modifier {
   @service autoScaleImage;
 
+  element = null;
+  args = null;
+
+  modify(element, [imageSrc, width, height, fallbackSrc]) {
+    this.element = element;
+    this.args = { imageSrc, width, height, fallbackSrc };
+    this.loadImage.perform();
+  }
   get width() {
-    return this.args.named.width || 0;
+    return this.args.width || 0;
   }
   get height() {
-    return this.args.named.height || 0;
+    return this.args.height || 0;
   }
 
   get imageSrc() {
-    return this.args.named.imageSrc || '';
+    return this.args.imageSrc || '';
   }
 
   get fallbackSrc() {
-    return this.args.named.fallbackSrc || '';
-  }
-
-  didReceiveArguments() {
-    this.loadImage.perform();
-  }
-
-  didUpdateArguments() {
-    this.loadImage.perform();
+    return this.args.fallbackSrc || '';
   }
 
   @task *loadImage() {
