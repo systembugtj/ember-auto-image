@@ -46,8 +46,6 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.locationType = 'hash';
     ENV.rootURL = '/ember-auto-image/';
-    ENV.locationType = 'hash';
-    ENV.rootURL = '/ember-auto-image/';
     // here you can enable a production-specific feature
   }
 
